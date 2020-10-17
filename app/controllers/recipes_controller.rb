@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.reverse
 
     render json: @recipes
   end
@@ -46,6 +46,6 @@ class RecipesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def recipe_params
-      params.require(:recipe).permit(:name, :first_ingredient, :second_ingredient, :third_ingredient, :category)
+      params.require(:recipe).permit(:name, :first_ingredient, :second_ingredient, :third_ingredient, :category, :instructions)
     end
 end

@@ -6,14 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-5.times do
-    Recipe.create(
-      name: Faker::Food.dish,
-      first_ingredient: Faker::Food.ingredient,
-      second_ingredient: Faker::Food.ingredient,
-      third_ingredient: Faker::Food.ingredient,
-      category: Faker::Dessert.variety
-    )
-  end
+# 5.times do
+#     Recipe.create(
+#       name: Faker::Food.dish,
+#       first_ingredient: Faker::Food.ingredient,
+#       second_ingredient: Faker::Food.ingredient,
+#       third_ingredient: Faker::Food.ingredient,
+#       category: Faker::Dessert.variety
+#     )
+#   end
 
-puts "Seeded database"
+# puts "Seeded database"
+
+# Recipe.delete_all
